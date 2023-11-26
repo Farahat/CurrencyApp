@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.MainActivity">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtAmount"
+        style="@style/Text.H5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_primary_stroke_radius_8dp"
+        android:hint="@string/plz_enter_amount"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="test" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputChangeCountry"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_primary_stroke_radius_8dp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/gray300"
+        app:boxStrokeWidth="0.7dp"
+        app:endIconDrawable="@drawable/ic_down_arrow"
+        app:endIconTint="@color/gray_800"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@+id/edtAmount"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtAmount">
+
+        <AutoCompleteTextView
+            android:id="@+id/acCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:inputType="none"
+            android:paddingVertical="12dp"
+            android:textColor="@color/gray_800"
+            android:textColorHint="@color/gray_800" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edtAmount"
+        app:layout_constraintStart_toStartOf="@+id/edtAmount"
+        app:layout_constraintTop_toBottomOf="@+id/tvNote"
+        tools:listitem="@layout/item_currency" />
+
+    <TextView
+        android:id="@+id/tvNote"
+        style="@style/Text.H5.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_amount_note"
+        android:textColor="@color/gray_800"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/edtAmount"
+        app:layout_constraintTop_toBottomOf="@+id/inputChangeCountry" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputChangeCountry"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>
