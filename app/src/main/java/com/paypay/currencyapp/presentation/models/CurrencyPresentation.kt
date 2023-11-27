@@ -1,4 +1,4 @@
-package com.paypay.currencyapp.data.models
+package com.paypay.currencyapp.presentation.models
 
 import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName

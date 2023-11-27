@@ -1,4 +1,4 @@
-package com.paypay.currencyapp.data.local
+package com.paypay.currencyapp.data.models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

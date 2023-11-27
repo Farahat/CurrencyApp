@@ -2,9 +2,9 @@ package com.paypay.currencyapp.data
 
 import android.util.Log
 import com.google.gson.Gson
-import com.paypay.currencyapp.data.local.CurrencyEntity
+import com.paypay.currencyapp.data.models.CurrencyEntity
 import com.paypay.currencyapp.data.local.ICurrencyLocalDataSource
-import com.paypay.currencyapp.data.models.CurrencyPresentation
+import com.paypay.currencyapp.presentation.models.CurrencyPresentation
 import com.paypay.currencyapp.data.remote.ICurrencyRateRemoteDataSource
 import com.paypay.currencyapp.data.utlis.Resource
 import com.paypay.currencyapp.data.utlis.isLocalDataOutDated
@@ -28,6 +28,7 @@ class CurrencyRateRepository @Inject constructor(
             when (val ratesResponse = getRemoteRates()) {
                 is Resource.Error -> Resource.Error(ratesResponse.message ?: "")
                 is Resource.Success -> {
+                    Log.d("|xxx",ratesResponse.data!!.rates.toString())
                     val currency = remoteRatesMapper.to(ratesResponse.data!!.rates)
                     insertRates(CurrencyEntity(1, Gson().toJson(currency)))
                     Resource.Success(currency)
@@ -38,6 +39,7 @@ class CurrencyRateRepository @Inject constructor(
             when (val ratesResponse = getLocalRates()) {
                 is Resource.Error -> Resource.Error(ratesResponse.message ?: "")
                 is Resource.Success -> {
+                    Log.d("zxxxx",ratesResponse.data!!.rates!!)
                     val currency = localRatesMapper.to(ratesResponse.data!!.rates!!)
                     Resource.Success(currency)
                 }

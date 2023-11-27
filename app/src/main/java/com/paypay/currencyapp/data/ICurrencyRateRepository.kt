@@ -1,7 +1,7 @@
 package com.paypay.currencyapp.data
 
-import com.paypay.currencyapp.data.local.CurrencyEntity
-import com.paypay.currencyapp.data.models.CurrencyPresentation
+import com.paypay.currencyapp.data.models.CurrencyEntity
+import com.paypay.currencyapp.presentation.models.CurrencyPresentation
 import com.paypay.currencyapp.data.models.CurrencyResponse
 import com.paypay.currencyapp.data.utlis.Resource
 

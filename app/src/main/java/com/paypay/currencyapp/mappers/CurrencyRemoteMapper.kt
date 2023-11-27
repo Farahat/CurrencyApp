@@ -1,7 +1,7 @@
 package com.paypay.currencyapp.mappers
 
-import com.paypay.currencyapp.data.models.CurrencyPresentation
-import com.paypay.currencyapp.data.models.RatePresentation
+import com.paypay.currencyapp.presentation.models.CurrencyPresentation
+import com.paypay.currencyapp.presentation.models.RatePresentation
 import com.paypay.currencyapp.data.utlis.roundOffDecimal
 
 class CurrencyRemoteMapper : Mapper<Map<String, Double>, CurrencyPresentation> {

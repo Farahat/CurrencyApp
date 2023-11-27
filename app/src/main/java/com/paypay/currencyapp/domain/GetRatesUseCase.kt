@@ -1,7 +1,7 @@
 package com.paypay.currencyapp.domain
 
 import com.paypay.currencyapp.data.ICurrencyRateRepository
-import com.paypay.currencyapp.data.models.CurrencyPresentation
+import com.paypay.currencyapp.presentation.models.CurrencyPresentation
 import com.paypay.currencyapp.data.utlis.Resource
 import javax.inject.Inject
 

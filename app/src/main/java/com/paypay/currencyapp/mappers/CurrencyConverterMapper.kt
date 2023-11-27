@@ -1,6 +1,6 @@
 package com.paypay.currencyapp.mappers
 
-import com.paypay.currencyapp.data.models.RatePresentation
+import com.paypay.currencyapp.presentation.models.RatePresentation
 import com.paypay.currencyapp.data.utlis.convertCurrency
 
 class CurrencyConverterMapper :

@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.paypay.currencyapp.domain.GetRatesUseCase
-import com.paypay.currencyapp.data.models.RatePresentation
+import com.paypay.currencyapp.presentation.models.RatePresentation
 import com.paypay.currencyapp.data.utlis.DispatcherProvider
 import com.paypay.currencyapp.data.utlis.Resource
 import com.paypay.currencyapp.data.utlis.isLocalDataOutDated

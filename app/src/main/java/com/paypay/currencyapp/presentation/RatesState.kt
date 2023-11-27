@@ -1,6 +1,6 @@
 package com.paypay.currencyapp.presentation
 
-import com.paypay.currencyapp.data.models.RatePresentation
+import com.paypay.currencyapp.presentation.models.RatePresentation
 
 sealed class RatesState {
     class Success(val rates: List<RatePresentation>, val currencies: List<String>) : RatesState()

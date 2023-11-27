@@ -3,8 +3,7 @@ package com.paypay.currencyapp.presentation
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.paypay.currencyapp.data.models.CurrencyPresentation
-import com.paypay.currencyapp.data.models.RatePresentation
+import com.paypay.currencyapp.presentation.models.RatePresentation
 import com.paypay.currencyapp.databinding.ItemCurrencyBinding
 
 class CurrencyAdapter(
